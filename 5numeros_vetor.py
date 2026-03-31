@@ -1,35 +1,25 @@
-import os 
-from colorama import init, Fore 
+import os
 
-init(autoreset = True)
+# Inicialização do vetor e variáveis
+numeros = []
+negativos_qtd = 0
+soma_positivos = 0
 
-#Limpa o Terminal
-os.system ("cls")
+print("Digite 5 números:")
 
-
-
-# Criando um Vetor.
-
-print(f"{Fore.CYAN}--- --------- \n")
-
-# 1. Criando o vetor (lista)
-numero = []
-QUANTIDADES_DE_NUMEROS = 5
-
-# Lendo os 5 números solicitados 
-
-for i in range (QUANTIDADES_DE_NUMEROS):
-    valor = float(input(f"Digite o {i+1}º número: "))
-    numero.append(valor)
+# Preenchendo o vetor
+for i in range(5):
+    num = float(input(f"Posição {i+1}: "))
+    numeros.append(num)
     
-# Processando os dados
-maior_numero = max(numero)
-menor_numero = min(numero)
+    # Processamento dos dados
+    if num < 0:
+        negativos_qtd += 1
+    else:
+        soma_positivos += num
 
-# Mostrando os resultados 
-
-print("\n" + "-"*35)
-print(f"{Fore.YELLOW}Números digitados: {numero}")
-print(f"{Fore.GREEN}O MAIOR número é: {maior_numero}")
-print(f"{Fore.RED}O MENOR número é: {menor_numero}")
-print("-"*35)
+# Exibição dos resultados
+print("\n--- RESULTADO ---")
+print(f"Vetor completo: {numeros}")
+print(f"Quantidade de números negativos: {negativos_qtd}")
+print(f"Soma dos números positivos: {soma_positivos}")
