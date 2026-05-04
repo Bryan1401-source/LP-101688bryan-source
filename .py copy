@@ -1,0 +1,36 @@
+import os
+from dataclasses import dataclass
+
+os.system('cls' if os.name == 'nt' else 'clear')
+
+@dataclass
+class Funcionario:
+    nome: str
+    email: str
+    telefone: str
+
+    def mostrar_dados(self):
+        print(f'Nome: {self.nome}')
+        print(f'E-mail: {self.email}@gmail.com')
+        print(f'Telefone: {self.telefone}')
+        print('-' * 20)
+
+lista_funcionario = []
+
+while True:
+    print('\n--- Solicitando dados ---')
+    nome = input('Digite seu nome (ou "sair" para encerrar): ')
+    
+    if nome.lower() == 'sair':
+        break
+        
+    email = input('Digite seu e-mail: ')
+    telefone = input('Digite seu telefone: ')
+
+    novo_funcionario = Funcionario(nome=nome, email=email, telefone=telefone)
+    lista_funcionario.append(novo_funcionario)
+
+print('\n--- Exibindo dados ---')
+for funcionario in lista_funcionario:
+    funcionario.mostrar_dados()
+
