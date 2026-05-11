@@ -1,23 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML - Outros recursos</title>
+    <title>Bryann - Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1> Titulo </h1>
-    <h2> Titulo </h2>
-    <h3> Titulo </h3>
-    <h4> Titulo </h4>
-    <h5> Titulo </h5>
-    <h6> Titulo </h6>
-<p>
- ><button>
-     <a href="index.html">Voltar para página inicial</a>
-        
-    </button>
+
+    <main class="container">
+        <div class="login-card">
+            <h1>Bem-vindo</h1>
+            <p>Faça login para continuar</p>
+            
+            <form>
+                <div class="input-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" placeholder="Digite sua senha">
+                </div>
+
+                <a href="pagina-1.html" style="text-decoration: none;">
+    <button type="button" class="btn-primary">Entrar</button>
+</a>
+            </form>
+
+            <div class="footer-links">
+                <a href="pagina-1.html" class="link-voltar">← Voltar para página inicial</a>
+            </div>
+        </div>
+    </main>
     
 </body>
 </html>
+
+

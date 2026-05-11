@@ -1,0 +1,77 @@
+<div class="layout">
+    <aside class="sidebar">
+        <h2>MeuApp</h2>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">🏠 Minhas Tarefas</a></li>
+                <li><a href="#">📊 Relatórios</a></li>
+                <li><a href="#">⚙️ Configurações</a></li>
+                <li><a href="pagina-2.html" class="logout">🚪 Sair</a></li>
+                <link rel="stylesheet" href="style-login.css">
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <div class="welcome-text">
+                <h1>Olá, Usuário! 👋</h1>
+                <p>Você tem <span class="highlight">3 tarefas</span> para hoje.</p>
+            </div>
+            <div class="date-display">12 de Maio, 2026</div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3>Pendentes</h3>
+                <p class="value">03</p>
+            </div>
+            <div class="stat-card">
+                <h3>Concluídas</h3>
+                <p class="value">12</p>
+            </div>
+            <div class="stat-card focus">
+                <h3>Meta Diária</h3>
+                <p class="value">80%</p>
+            </div>
+        </section>
+
+        <section class="task-section">
+            <div class="section-header">
+                <h2>Organizar Atividades</h2>
+                <div class="add-task-box">
+                    <input type="text" placeholder="Ex: Estudar JavaScript..." id="taskInput">
+                    <button type="button">Adicionar</button>
+                </div>
+            </div>
+
+            <div class="task-list">
+                <div class="task-item urgent">
+                    <input type="checkbox">
+                    <div class="task-info">
+                        <span>Finalizar relatório mensal</span>
+                        <small>Prioridade Alta</small>
+                    </div>
+                </div>
+                <div class="task-item study">
+                    <input type="checkbox">
+                    <div class="task-info">
+                        <span>Estudar CSS Grid e Flexbox</span>
+                        <small>Educação</small>
+                    </div>
+                </div>
+                <div class="task-item meeting">
+                    <input type="checkbox">
+                    <div class="task-info">
+                        <span>Reunião de alinhamento</span>
+                        <small>14:00 - Online</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<body>
+    <script src="script.js"></script>
+</body>
