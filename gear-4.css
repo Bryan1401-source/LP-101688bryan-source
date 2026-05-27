@@ -1,0 +1,86 @@
+/* GEAR-4.CSS - Tema Haki e Músculos (Ajustado para destacar o fundo) */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Wallpaper de alta qualidade do Gear 4 Boundman com vinheta escura */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url('assets/thumb-1920-643485.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    color: #e2e8f0;
+    line-height: 1.6;
+    animation: fadeInPage 1s ease-in-out;
+}
+
+nav {
+    background-color: rgba(15, 13, 19, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #d6bcfa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #fbb6ce;
+    text-shadow: 0 0 10px #b83280;
+    transform: scale(1.05);
+}
+
+/* Caixa estilo Wiki deslocada para baixo e integrada ao Haki escuro */
+.main-gear-4 {
+    max-width: 750px;
+    margin: 35vh auto 60px auto; /* Libera o topo para ver o Luffy musculoso */
+    padding: 40px;
+    background: rgba(33, 26, 41, 0.85); /* Vidro escuro para combinar com o Haki */
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    border-top: 6px solid #b83280;
+    animation: impactDrop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #fbb6ce;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #44335a;
+    padding-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+p {
+    font-size: 1.1rem;
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+/* Animações */
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes impactDrop {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
